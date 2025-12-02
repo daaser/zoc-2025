@@ -20,7 +20,7 @@ if [[ -d "${BASEPATH}" ]] && [[ -f "${BASEPATH}/root.zig" ]]; then
 fi
 
 set -xe
-sed -i "" "\$s?}\$?    try printBox(\"DAY ${DAY}\", @import(\"day${DAY}/root.zig\"));\n}?" ./src/main.zig
+sed -i "" "\$s?}\$?    try printBox(alloc, \"DAY ${DAY}\", @import(\"day${DAY}/root.zig\"));\n}?" ./src/main.zig
 
 mkdir "${BASEPATH}"
 cp tmpl.zig "${BASEPATH}/root.zig"
