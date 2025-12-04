@@ -1,8 +1,9 @@
 const std = @import("std");
-const util = @import("../util.zig");
 const Allocator = std.mem.Allocator;
+
+const util = @import("../util.zig");
+
 const input = @embedFile("input.txt");
-// const input = "L680\nL30\nR48\nL5\nR60\nL55\nL1\nL99\nR14\nL82";
 
 pub const Day = struct {
     pub fn partOne(alloc: Allocator) !u64 {

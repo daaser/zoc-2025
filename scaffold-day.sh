@@ -15,7 +15,7 @@ fi
 BASEPATH="./src/day${DAY}"
 
 if [[ -d "${BASEPATH}" ]] && [[ -f "${BASEPATH}/root.zig" ]]; then
-  echo "Day already scaffolded"
+  echo "Day ${DAY} already scaffolded"
   exit 0
 fi
 
