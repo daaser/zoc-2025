@@ -66,7 +66,12 @@ pub fn isRepeatedAtLeastTwice(n: usize) bool {
 
 pub fn matchesPattern(n: u64, ds: u8, pattern: u64, pattern_len: u8, pattern_count: u8) bool {
     for (1..pattern_count) |pi| {
-        const target = slice(n, @intCast(pi * pattern_len), @intCast((pi + 1) * pattern_len), ds);
+        const target = slice(
+            n,
+            @intCast(pi * pattern_len),
+            @intCast((pi + 1) * pattern_len),
+            ds,
+        );
         if (pattern != target) return false;
     }
     return true;

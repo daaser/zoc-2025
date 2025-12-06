@@ -22,11 +22,12 @@ pub fn printBox(alloc: Allocator, comptime name: []const u8, comptime T: type) !
 
 pub fn main() !void {
     var aa = std.heap.ArenaAllocator.init(std.heap.page_allocator);
-    errdefer aa.deinit();
+    defer aa.deinit();
     const alloc = aa.allocator();
 
     try printBox(alloc, "DAY 1", @import("day1/root.zig"));
     try printBox(alloc, "DAY 2", @import("day2/root.zig"));
     try printBox(alloc, "DAY 3", @import("day3/root.zig"));
     try printBox(alloc, "DAY 4", @import("day4/root.zig"));
+    try printBox(alloc, "DAY 5", @import("day5/root.zig"));
 }

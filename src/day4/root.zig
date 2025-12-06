@@ -51,7 +51,8 @@ fn countAccessible(grid: [][]Cell) u64 {
 
                 if (x_ > grid[0].len - 1 or y_ > grid.len - 1) continue;
 
-                if (grid[y_][x_] == Cell.roll or grid[y_][x_] == Cell.accessible) numRolls += 1;
+                if (grid[y_][x_] == Cell.roll or grid[y_][x_] == Cell.accessible)
+                    numRolls += 1;
             }
             if (numRolls < 4) {
                 cell.* = Cell.accessible;
