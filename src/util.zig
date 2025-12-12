@@ -21,6 +21,33 @@ pub fn splitByte(alloc: std.mem.Allocator, data: []const u8, b: u8) ![][]const u
     return buf[0..idx];
 }
 
+pub const powers = [_]u64{
+    1,
+    10,
+    100,
+    1000,
+    10000,
+    100000,
+    1000000,
+    10000000,
+    100000000,
+    1000000000,
+    10000000000,
+    100000000000,
+};
+
+pub fn digits(n: u64) u8 {
+    var d: u8 = 1;
+    inline for (1..12) |e| d += @intFromBool(n >= powers[e]);
+    return d;
+}
+
+pub fn slice(n: u64, start: u8, end: u8, ds: u8) u64 {
+    const left: u64 = ds - end;
+    const len: u64 = end - start;
+    return @mod(@divFloor(n, powers[left]), powers[len]);
+}
+
 pub fn OverlappingWindow(comptime T: type) type {
     return struct {
         data: []const T,

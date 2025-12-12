@@ -30,4 +30,10 @@ pub fn main() !void {
     try printBox(alloc, "DAY 3", @import("day3/root.zig"));
     try printBox(alloc, "DAY 4", @import("day4/root.zig"));
     try printBox(alloc, "DAY 5", @import("day5/root.zig"));
+    try printBox(alloc, "DAY 6", @import("day6/root.zig"));
+    try printBox(alloc, "DAY 7", @import("day7/root.zig"));
+    try printBox(alloc, "DAY 8", @import("day8/root.zig"));
+    try printBox(alloc, "DAY 9", @import("day9/root.zig"));
+    try printBox(alloc, "DAY 10", @import("day10/root.zig"));
+    try printBox(alloc, "DAY 11", @import("day11/root.zig"));
 }
