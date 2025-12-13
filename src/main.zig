@@ -36,4 +36,5 @@ pub fn main() !void {
     try printBox(alloc, "DAY 9", @import("day9/root.zig"));
     try printBox(alloc, "DAY 10", @import("day10/root.zig"));
     try printBox(alloc, "DAY 11", @import("day11/root.zig"));
+    try printBox(alloc, "DAY 12", @import("day12/root.zig"));
 }
